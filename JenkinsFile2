@@ -32,7 +32,7 @@ pipeline {
           
           stage('UnitTest'){
               
-              agent any
+              agent {label 'linux_slave'}
               
               steps{
                   sh 'mvn test'
